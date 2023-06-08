@@ -1,47 +1,55 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Orbitron', sans-serif;
-}
 
+body {
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-body);
+}
 .container{
+    width: 400px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
     padding-top: 3rem;
-    background-color: #f1f1f1;
-    height: 100vh;
+    background-color: var(--background-container);
+    border-radius: 15px;
 }
 
 .container h1{
-    color: #175cff;
+    margin-bottom: 20px;
+    color: var(--text-color-title);
+    font-size: 30px;
+    text-transform: uppercase;
 }
 
 .timer{
     display: flex;
-    font-size: 55px;
+    font-size: 35px;
     font-weight: bold;
-    color: #333;
+    color: var(--text-color-timer);
 }
 
 .time{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 10px;
-    color: #172953;
+    color: var(--text-color-time);
     min-width: 90px;
 }
 
 .separator{
-    padding: 0 10px;
-    color: #525763;
+    padding: 0 2px;
+    color: var(--text-color-separator);
 }
 
 #milliseconds{
     font-size: 30px;
-    color: #525763;
+    color: var(--text-color-separator);
 }
 
 .buttons{
@@ -53,19 +61,25 @@
     padding: 10px 20px;
     font-size: 18px;
     font-weight: bold;
-    border-radius: 30px;
+    border-radius: 10px;
     cursor: pointer;
-    border: 1px solid #CCC;
+    border: 1px solid var(--text-color-border);
     transition: all .2s ease-in-out;
 }
 
 .btn:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
+
+}
+
+
+.btn.reset:hover, .btn.start:hover {
+    background-color: var(--text-color-title);
+    color: var(--text-color-buttom);
 }
 
 #startBtn{
-    background-color: #175cff;
-    color: #fff
+    background-color: var(--text-color-title);
 }
 
 #pauseBtn, #resumeBtn{
